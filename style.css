@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #def3f6;
+    /* color: rgb(162, 16, 16); */
+}
+.flower{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.petal{
+    height: 100px;
+    width: 100px;
+    background-color: #1c85bd;
+    /* background-color: #ff69b4; */
+    border-radius: 50% 50% 0 0 ;
+    /*to put petals one below another*/ 
+    position: absolute;   
+    /* transform: rotate(0deg); */
+    transform-origin: bottom center; /*to rotate petals from bottom center;*/ 
+    /* animation: bloom 2s ease-in-out forwards; */
+    animation: bloom infinite 2s ease-in-out forwards;
+}
+
+@keyframes bloom{
+    from{
+        scale:0.2; 
+        opacity: 0.2;
+    }
+    to{
+        scale:1 ;
+        opacity:1;
+    }
+}
+
+/* adding 6 petals and making them rotate each by 60 degrees  */
+.petal1 {
+  transform: rotate(0deg) translateY(-60%);
+}
+.petal2 {
+  transform: rotate(60deg) translateY(-60%);
+}
+.petal3 {
+  transform: rotate(120deg) translateY(-60%);;
+}
+.petal4 {
+  transform: rotate(180deg) translateY(-60%);;
+}
+.petal5 {
+  transform: rotate(240deg) translateY(-60%);;
+}
+.petal6 {
+  transform: rotate(300deg) translateY(-60%);;
+}
+
+/* to fill the centre */
+.center{
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:23%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.stem{
+    position: absolute;
+    width: 20px;
+    height: 400px;
+    background-color: #2e8b57;
+    border-radius: 10%;
+    top: 50%;
+    left: 25%;
+    transform: translate(-60%);
+}
+
+
+.leaf {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: #3cb371;
+  border-radius: 50% 50% 50% 0;
+}
+
+.leaf-left {
+  top: 120%;
+  /* left: 1%; */
+  transform: scaleX(-1)  rotate(45deg);
+}
+
+.leaf-right {
+  top: 120%;
+  right: 48%;
+  transform: rotate(45deg);
+}
